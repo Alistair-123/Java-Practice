@@ -99,12 +99,13 @@ public class MiniAssessment {
         // Console Calculator & Student Evaluator
 
         // int test = sc.nextInt();
+
+        while(true){
         System.out.println("Choose Console Calculator & Student Evaluator: ");
         System.out.println("1 - Calculator: ");
         System.out.println("2 - Student Evaluation: ");
         System.out.println("3 - Exit: ");
 
-        System.out.println("Choose: ");
         int test = sc.nextInt();
 
         switch (test) {
@@ -148,7 +149,7 @@ public class MiniAssessment {
                         break;
 
                     case 3: 
-                        System.out.println("Subtraction: ");
+                        System.out.println("Multiplication: ");
                         sc.nextLine();
                         System.out.print("Enter first number: ");
                          int mul1 = sc.nextInt();
@@ -192,6 +193,7 @@ public class MiniAssessment {
             default:
                 break;
         }
+    }
     }
 
     public static int add(int num1, int num2){
