@@ -12,10 +12,10 @@
         // Loops
         // Methods
         // Clean logic flow
-
+import java.util.Scanner;  
 public class MiniAssessment {
     public static void main(String[] args) {
-        
+        Scanner sc = new Scanner(System.in);
         // Question 1 
         // Create a valid Java program named:
         System.out.println("Alistair Jan Loberternos");
@@ -98,15 +98,108 @@ public class MiniAssessment {
         //  Project Title
         // Console Calculator & Student Evaluator
 
-        
+        // int test = sc.nextInt();
+        System.out.println("Choose Console Calculator & Student Evaluator: ");
+        System.out.println("1 - Calculator: ");
+        System.out.println("2 - Student Evaluation: ");
+        System.out.println("3 - Exit: ");
+
+        System.out.println("Choose: ");
+        int test = sc.nextInt();
+
+        switch (test) {
+
+            case 1:
+
+                System.out.println("Calcualtor:  Choose 1 - Add, 2 - Subtract, and 3 - multiply: ");
+              
+                
+                System.out.println("");
+              
+                System.out.println("Choose: ");
+                int choose = sc.nextInt();
+
+                switch (choose) {
+                    case 1:
+
+                        System.out.println("Addition: ");
+                         System.out.print("Enter first number: ");
+                         int add1 = sc.nextInt();
+                            sc.nextLine();
+                         System.out.print("Enter second number: ");
+                         int  add2 = sc.nextInt();
+
+                         int addResult = add(add1, add2);
+                         System.out.println(addResult);
+
+                        break;
+                
+                    case 2:
+                        System.out.println("Subtraction: ");
+                        sc.nextLine();
+                        System.out.print("Enter first number: ");
+                         int sub1 = sc.nextInt();
+
+                         System.out.print("Enter second number: ");
+                         int sub2 = sc.nextInt();
+
+                         int subtract2 = subtract(sub1, sub2);
+                         System.out.println(subtract2);
+                        break;
+
+                    case 3: 
+                        System.out.println("Subtraction: ");
+                        sc.nextLine();
+                        System.out.print("Enter first number: ");
+                         int mul1 = sc.nextInt();
+
+                         System.out.print("Enter second number: ");
+                         int mul2 = sc.nextInt();
+
+                         int multiply3 = multiply(mul1, mul2);
+                         System.out.println(multiply3);
+                        break;
+
+                    default:
+                        break;
+                }
+
+                break;
+
+
+            case 2: 
+
+                System.out.println("Student Evaluation: ");
+
+                sc.nextLine();
+
+                System.out.print("Enter Name: ");
+                String name = sc.nextLine();
+
+                System.out.print("Enter Grade: ");
+                int studentGrade = sc.nextInt();
+                
+                if(studentGrade >= 75){
+                    System.out.println("Student: " + name + " " + "Passed With a Grade of: " + studentGrade);
+                }else{
+                     System.out.println("Student: " + name + " " + "Failed With a Grade of: " + studentGrade);
+                }
+                break;
+
+            case 3:
+
+                break;
+            default:
+                break;
+        }
     }
 
     public static int add(int num1, int num2){
         return num1 + num2;
     }
 
-    public static int subtract(int num1, int num2){
-        return num1 - num2;
+    public static int subtract(int a, int b){
+        return a - b;
     }
 
     public static int multiply(int num1, int num2){
